@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | ชลธร หรั่งศิริ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Welcome Page -->
+    <div class="welcome-page" id="welcomePage">
+        <div class="welcome-content">
+            <img src="me2.jpg" alt="Profile">
+            <h1>ยินดีต้อนรับ</h1>
+            <p>ชลธร หรั่งศิริ - Resume</p>
+            <button class="enter-btn" onclick="enterResume()">
+                <i class="fas fa-arrow-right"></i> เข้าสู่เรซูเม่
+            </button>
+        </div>
+    </div>
+
+    <!-- Menu Toggle Button -->
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="me2.jpg" alt="Profile" class="sidebar-profile-pic">
+            <div class="sidebar-name">ชลธร หรั่งศิริ</div>
+            <div class="sidebar-title">Computer Engineering & AI</div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#about" onclick="navigateTo(event, '#about')"><i class="fas fa-user"></i> About Me</a></li>
+            <li><a href="#education" onclick="navigateTo(event, '#education')"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#skills" onclick="navigateTo(event, '#skills')"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="#projects" onclick="navigateTo(event, '#projects')"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="#certifications" onclick="navigateTo(event, '#certifications')"><i class="fas fa-award"></i> Certifications</a></li>
+            <li><a href="#contact" onclick="navigateTo(event, '#contact')"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header Section -->
+        <header class="header-section">
+            <div class="header-content">
+                <h1>สวัสดีครับ! 👋</h1>
+                <p class="tagline">วิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์ | สถาบันการจัดการปัญญาภิวัฒน์</p>
+                <div class="bio">
+                    เป็นคนสนุกสนาน อบอุ่น และชอบเรียนรู้สิ่งใหม่ ๆ โดยเฉพาะด้านเทคโนโลยี ชอบสร้างสรรค์เว็บไซต์และระบบที่ใช้งานได้จริง พร้อมเรียนรู้เพื่อพัฒนาตัวเองให้เติบโตในสายอาชีพด้านเทคโนโลยี
+                </div>
+            </div>
+        </header>
+
+        <!-- About -->
+        <section id="about">
+            <h2 class="section-title"><i class="fas fa-user-circle"></i> About Me</h2>
+            <div class="content-card">
+                <p style="font-size: 1.15rem; line-height: 1.8;">
+                    ผมเป็นนักศึกษาที่สนใจในการพัฒนาเว็บไซต์และโปรแกรม ชอบเรียนรู้เทคโนโลยีใหม่ ๆ เช่น HTML, CSS, JavaScript, และ AI เป้าหมายคือการพัฒนาทักษะด้าน Software Development และ Artificial Intelligence เพื่อสร้างผลงานที่เป็นประโยชน์ต่อผู้คน
+                </p>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="content-card">
+                <h5 style="font-family: 'Kanit', sans-serif; font-size: 1.5rem; color: #80A1BA; margin-bottom: 1rem;">
+                    ปริญญาตรี วิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์ (CAI)
+                </h5>
+                <p style="color: #666; font-size: 1.1rem;"><i class="far fa-calendar-alt"></i> 2024 - ปัจจุบัน</p>
+                <p style="font-size: 1.15rem; margin-top: 1rem;"><strong>สถาบันการจัดการปัญญาภิวัฒน์ (PIM)</strong></p>
+                <p style="color: #666;">คณะวิศวกรรมศาสตร์และเทคโนโลยี (ET)</p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2 class="section-title"><i class="fas fa-code"></i> Skills</h2>
+            <div class="skills-grid">
+                <!-- Technical Skills -->
+                <div class="skill-box">
+                    <h5><i class="fas fa-laptop-code"></i> Technical Skills</h5>
+
+                    <div class="skill-category">
+                        <h6>Programming Languages</h6>
+                        <ul>
+                            <li>Java (OOP)</li>
+                            <li>HTML</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h6>Tools & Platforms</h6>
+                        <ul>
+                            <li>NetBeans IDE</li>
+                            <li>VS Code</li>
+                            <li>GitHub</li>
+                            <li>MySQL Workbench</li>
+                            <li>Microsoft 365</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-box">
+                    <h5><i class="fas fa-users"></i> Soft Skills</h5>
+                    <ul>
+                        <li>มีทักษะการแก้ปัญหาและการตัดสินใจที่ยอดเยี่ยม</li>
+                        <li>มีความคิดอย่างเป็นระบบและสามารถวางแผนได้อย่างมีประสิทธิภาพ</li>
+                        <li>เรียนรู้ได้รวดเร็ว พร้อมมีประสบการณ์ด้านภาวะผู้นำและการทำงานเป็นทีม</li>
+                        <li>มีทักษะการสื่อสารที่มีประสิทธิภาพในการทำงานร่วมกันในโครงการ</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2 class="section-title"><i class="fas fa-project-diagram"></i> Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <i class="fas fa-globe"></i>
+                    <h5>Website Resume Project</h5>
+                    <p>เว็บเรซูเม่ส่วนตัวที่พัฒนาโดยใช้ HTML, CSS, และ Bootstrap พร้อมการออกแบบที่ทันสมัยและ Responsive</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications">
+            <h2 class="section-title"><i class="fas fa-award"></i> Certifications & Achievements</h2>
+            <div class="cert-item">
+                <i class="fas fa-certificate"></i>
+                <span>Introduction to Web Development – Coursera (2024)</span>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2 class="section-title"><i class="fas fa-envelope"></i> Contact</h2>
+            <ul class="contact-list">
+                <li><i class="fas fa-envelope"></i> Email: 6752300135<img src="at-icon.png" alt="@" class="at-icon">stu.pim.ac.th</li>
+                <li><i class="fas fa-phone"></i> Phone: 082-123-4567</li>
+                <li><i class="fas fa-map-marker-alt"></i> Address: กรุงเทพมหานคร, ประเทศไทย</li>
+                <li><i class="fab fa-github"></i> GitHub: <a href="https://yourusername.github.io/resume/" target="_blank">yourusername.github.io/resume/</a></li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 ชลธร หรั่งศิริ | Created with 💻 using HTML, CSS & Bootstrap</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Enter Resume
+        function enterResume() {
+            document.getElementById('welcomePage').classList.add('hidden');
+        }
+
+        // Toggle Menu
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const menuToggle = document.getElementById('menuToggle');
+
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+
+        // Navigate and close menu
+        function navigateTo(event, target) {
+            event.preventDefault();
+            toggleMenu();
+
+            setTimeout(() => {
+                document.querySelector(target).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }, 300);
+        }
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const sidebar = document.getElementById('sidebar');
+                if (sidebar.classList.contains('active')) {
+                    toggleMenu();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
